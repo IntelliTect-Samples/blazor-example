@@ -1,2 +1,2 @@
 # blazor-example
-Dotnet 6 Blazor Example Project
+Dotnet 6 Blazor Clone of Wordle
