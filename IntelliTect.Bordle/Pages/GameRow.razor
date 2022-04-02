@@ -1,0 +1,20 @@
+﻿<div class="game-row">
+    @for (int i = 0; i < Length; i++)
+    {
+        <GameTile Letter="@(GetLetter(i))" />
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Letters { get; set; } = string.Empty;
+    [Parameter]
+    public int Length { get; set; }
+
+    private char[] LetterArray => Letters.ToArray();
+
+    private char GetLetter(int index)
+    {
+        return string.IsNullOrWhiteSpace(Letters) ? default(char) : LetterArray[index];
+    }
+}
